@@ -69,6 +69,7 @@ Use o Multer como middleware em rotas para processar e salvar arquivos enviados 
 #### Exemplo de Implementação Multer
 
 Veja um exemplo prático de como implementar e usar o Multer em uma aplicação Node.js.
+O código se encontra nesse repositório.
 
 ## O que é MongoDB?
 
@@ -109,10 +110,10 @@ mongo
 
 ### 2. Criar um banco de dados:
 
-Você pode criar um banco de dados usando o comando `use nome_do_banco_de_dados`. Se o banco de dados já existir, ele será selecionado; caso contrário, ele será criado quando você inserir dados nele.
+Você pode criar um banco de dados usando o comando `use coders`. Se o banco de dados já existir, ele será selecionado; caso contrário, ele será criado quando você inserir dados nele.
 
 ```
-use minha_base_de_dados
+use coders
 ```
 
 ### 3. Criar uma coleção:
@@ -120,7 +121,7 @@ use minha_base_de_dados
 Você pode criar uma coleção inserindo um documento na coleção. Quando você insere um documento em uma coleção que ainda não existe, a coleção é criada automaticamente.
 
 ```
-db.minha_colecao.insertOne({ chave: valor })
+db.alunos.insertOne({ nome: "Jeni", idade: 33 })
 ```
 
 ### 4. Inserir usuários na coleção:
@@ -128,8 +129,8 @@ db.minha_colecao.insertOne({ chave: valor })
 Você pode inserir documentos na coleção usando o método `insertOne()` ou `insertMany()`.
 
 ```
-db.minha_colecao.insertOne({ nome: "Alice", idade: 30 })
-javascriptCopy codedb.minha_colecao.insertMany([
+db.alunos.insertOne({ nome: "Jeni", idade: 33 })
+db.alunos.insertMany([
     { nome: "Bob", idade: 25 },
     { nome: "Carol", idade: 35 },
     { nome: "David", idade: 40 }
@@ -149,7 +150,7 @@ show dbs
 - Selecionar um banco de dados específico:
 
 ```
-use minha_base_de_dados
+use coders
 ```
 
 - Listar todas as coleções no banco de dados atual:
@@ -161,7 +162,7 @@ show collections
 - Visualizar todos os documentos em uma coleção:
 
 ```
-db.minha_colecao.find()
+db.alunos.find()
 ```
 
 
